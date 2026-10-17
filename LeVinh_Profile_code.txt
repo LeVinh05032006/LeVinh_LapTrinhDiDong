@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Màn hình Profile - dựa theo Figma -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- ===== PHẦN NỘI DUNG (cuộn được) ===== -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Tiêu đề -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="My Profile"
+                android:textColor="#1B4D3E"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <!-- Avatar (bo tròn) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="44dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/avatar" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tên + Email -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="D.Kaphy LiLy"
+                android:textColor="#1B4D3E"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:text="kaphylily369@gmail.com"
+                android:textColor="#9E9E9E"
+                android:textSize="14sp" />
+
+            <!-- ===== NHÓM ACCOUNT ===== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Account"
+                android:textColor="#9E9E9E"
+                android:textSize="14sp" />
+
+            <!-- Settings -->
+            <LinearLayout
+                android:id="@+id/rowSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="10dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    app:cardBackgroundColor="#E0E0E0"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_settings" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:text="Settings"
+                    android:textColor="#1B4D3E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_chevron_right" />
+            </LinearLayout>
+
+            <!-- Notifications -->
+            <LinearLayout
+                android:id="@+id/rowNotifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="10dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    app:cardBackgroundColor="#6FEFE3"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_notifications" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:text="Notifications"
+                    android:textColor="#1B4D3E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_chevron_right" />
+            </LinearLayout>
+
+            <!-- Order History -->
+            <LinearLayout
+                android:id="@+id/rowOrderHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="10dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    app:cardBackgroundColor="#FFCBA4"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_history" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:text="Order History"
+                    android:textColor="#1B4D3E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_chevron_right" />
+            </LinearLayout>
+
+            <!-- ===== NHÓM GENERAL ===== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="General"
+                android:textColor="#9E9E9E"
+                android:textSize="14sp" />
+
+            <!-- Privacy & Policy -->
+            <LinearLayout
+                android:id="@+id/rowPrivacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="10dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    app:cardBackgroundColor="#8EC5FF"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_lock" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:text="Privacy &amp; Policy"
+                    android:textColor="#1B4D3E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_chevron_right" />
+            </LinearLayout>
+
+            <!-- Terms & Conditions -->
+            <LinearLayout
+                android:id="@+id/rowTerms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="10dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    app:cardBackgroundColor="#FFE98A"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_info" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:text="Terms &amp; Conditions"
+                    android:textColor="#1B4D3E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_chevron_right" />
+            </LinearLayout>
+
+            <!-- Log Out -->
+            <LinearLayout
+                android:id="@+id/rowLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="10dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    app:cardBackgroundColor="#FFB3B8"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_logout" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:text="Log Out"
+                    android:textColor="#1B4D3E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_chevron_right" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ===== THANH ĐIỀU HƯỚNG DƯỚI CÙNG ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <!-- Home -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_home"
+                app:tint="#9E9E9E" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="#9E9E9E"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Like -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_like"
+                app:tint="#9E9E9E" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Like"
+                android:textColor="#9E9E9E"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Scan -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_scan"
+                app:tint="#9E9E9E" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scan"
+                android:textColor="#9E9E9E"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Cart -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_cart"
+                app:tint="#9E9E9E" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cart"
+                android:textColor="#9E9E9E"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Profile (đang chọn) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_profile"
+                app:tint="#1B2A4A" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="#1B2A4A"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
